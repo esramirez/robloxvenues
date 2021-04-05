@@ -1,37 +1,128 @@
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html>
 
-<div class="container">
-    <div class="row">
-    	<div class="col-md-4 col-md-offset-4">
-    		<div class="panel panel-default">
-			  	<div class="panel-heading">
-			    	<h3 class="panel-title">Login via site</h3>
-			 	</div>
-			  	<div class="panel-body">
-			    	<form accept-charset="UTF-8" role="form">
-                    <fieldset>
-			    	  	<div class="form-group">
-			    		    <input class="form-control" placeholder="yourmail@example.com" name="email" type="text">
-			    		</div>
-			    		<div class="form-group">
-			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
-			    		</div>
-			    		<div class="checkbox">
-			    	    	<label>
-			    	    		<input name="remember" type="checkbox" value="Remember Me"> Remember Me
-			    	    	</label>
-			    	    </div>
-			    		<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
-			    	</fieldset>
-			      	</form>
-                      <hr/>
-                    <center><h4>OR</h4></center>
-                    <input class="btn btn-lg btn-facebook btn-block" type="submit" value="Login via facebook">
-			    </div>
-			</div>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Login or Signup</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="canonical" href="http://vidpub.com/account/login">
+  <link rel="alternate" type="application/rss+xml" title="Vidpub" href="http://vidpub.com/feed.xml">
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<meta charset="utf-8">
+
+
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a href="/" class="navbar-brand">Vidpub</a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="catalog">Catalog <span class="caret"></span></a>
+          <ul class="dropdown-menu" aria-labelledby="catalog">
+            
+            <li><a href="/products/rocketpack-basics">Rocket Pack Basics</a></li>
+            
+            <li><a href="/products/returning-to-earth-without-a-rocket">Returning Home Without a Rocket</a></li>
+            
+            <li><a href="/products/piloting-a-mav-without-a-roof">Piloting a MAV Without a Roof</a></li>
+            
+            <li><a href="/products/detecting-a-pending-alien-invasion">Detecting a Pending Alien Invasion</a></li>
+            
+            <li><a href="/products/coping-with-red">Coping With Red</a></li>
+            
+            <li><a href="/products/breathing-on-mars-without-a-suit">Breathing on Mars Without a Suit</a></li>
+            
+          </ul>
+        </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
+
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/account/login" >Login/Signup</a></li>
+        <li><a href="http://google.com" target="_blank">Help</a></li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+    <div class="container" style="padding-top: 80px;padding-bottom:120px;">
+  <link rel="stylesheet" href="/css/login.css">
+<div class="omb_login">
+  <h3 class="omb_authTitle">Login or <a href="/account/signup">Sign up</a></h3>
+	<div class="row omb_row-sm-offset-3 omb_socialButtons">
+      <div class="col-xs-12 col-sm-6">
+      <a href="#" class="btn btn-lg btn-block omb_btn-github" id="github">
+        <i class="fa fa-github"></i>
+        <span class="hidden-xs">Github</span>
+      </a>
+    </div>
+	</div>
+
+	<div class="row omb_row-sm-offset-3 omb_loginOr">
+		<div class="col-xs-12 col-sm-6">
+			<hr class="omb_hrOr">
+			<span class="omb_spanOr">or</span>
 		</div>
 	</div>
+
+	<div class="row omb_row-sm-offset-3">
+		<div class="col-xs-12 col-sm-6">
+
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-user"></i></span>
+				<input type="text" class="form-control" id="email" placeholder="Email">
+			</div>
+			<span class="help-block"></span>
+
+			<div class="input-group">
+				<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+				<input  type="password" class="form-control" id="password" placeholder="Password">
+			</div>
+      <span class="help-block"></span>
+
+			<button class="btn btn-lg btn-primary btn-block" id="login">Login</button>
+      <span class="help-block" id="error" style="color:red;font-weight:bold"></span>
+		</div>
+  </div>
 </div>
+
+</div>
+
+
+
+    <div class="container">
+  <footer>
+    <div class="row">
+      <p>&copy; Massively Successful Company, 2015</p>
+    </div>
+
+  </footer>
+</div>
+
+
+  </body>
+
+</html>
